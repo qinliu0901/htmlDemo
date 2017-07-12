@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CSS的边框属性</title>
+		<meta charset='UTF-8'>
+		<style type='text/css'>
+			div{
+				width: 50px;
+				height: 50px;
+				background-color: #f60;
+				float:left;
+				margin-right: 10px;
+				border-width: thick;
+				border-color: green red;
+			}
+			.div1{
+				 border-top-style: solid;
+			}
+			.div2{
+				 border-left-style: dashed;
+			}
+			.div3{
+				 border-right-style: dotted;
+			}
+			.div6{
+				 border-style: double;
+			}
+			.div4,.div5{
+				border-width: 20px;
+				width: 80px;
+				height: 40px;
+				background-color: green;
+				border-color: #aaa #bbb #ccc #ddd;
+				/*border:solid 2px black;*/
+			}
+			.div4{
+				 border-style: groove;
+			}
+			.div5{
+				 border-style: inset;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='div1'>solid</div>
+		<div class='div2'>dashed</div>
+		<div class='div3'>dotted</div>	
+		<div class='div4'>凸槽边框</div>
+		<div class='div5'>inset</div>	
+		<div class='div6'>双线</div>		
+	</body>
+</html>
