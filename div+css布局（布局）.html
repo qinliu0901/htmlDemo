@@ -8,13 +8,14 @@
 				margin:0;
 				padding:0;
 			}
-			.div{
+			/*.div{
 				width: 300px;
 				height: 300px;
 				background-color: green;
 				position: relative;
 				left: 10px;
 				top: 10px;
+				z-index: 1;层覆盖先后显示顺序
 			}
 			span{
 				background-color: #f60;
@@ -22,23 +23,36 @@
 				color: #fff;
 				top: 10px;
 				right: 0;
+				z-index: 0;
 			}
 			.fixed{
 				background-color: #f60;
-				position: fixed;
+				position: fixed;相对于浏览器窗口不变的
 				color: #fff;
 				top: 100px;
+				z-index: 2;
+				display: 
+			}*/
+			div{
+				background-color: green;
+				width: 200px;
+			}
+			span{
+				background-color: red;
+				display: block;
+				width: 200px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class='div'>
-		<span>浏览次数</span></div>
-		<div class='fixed'>
+		<!--div class='fixed'>
 			<p>联系电话：11111</p>
 			<p>联系qq：11111</p>
 			<p>联系地址：11111</p>
-		</div>
+		</div><div class='div'>
+		<span>浏览次数</span></div-->
+		<div>麦子学院</div>
+		<span>麦子学院</span>
 		<br/>
 		<br/>
 		<br/>
