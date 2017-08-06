@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn3" value="test5" />
+		<input type="button" id="btn4" value="test6" />
+		<script type="text/javascript">
+			var btn3=document.getElementById('btn3');
+			var count=0;
+			btn3.onclick=function(){
+				alert(count++);
+				if(count==3){
+					btn3.onclick=null;
+				}
+			}
+			var btn4=document.getElementById('btn4');
+			btn4.onclick=function(){
+				alert('a');
+				}
+			btn4.onclick=function(){
+				alert('b');
+				}
+			btn4.onclick=function(){
+				alert('c');
+				}
+			
+			
+		</script>
+	</body>
+</html>

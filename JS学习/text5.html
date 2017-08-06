@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//回调函数的例子
+//			function calc(x,y){
+//				return x()+y();
+//			}
+//			function test1(){
+//				return 3;
+//			}
+//			function test2(){
+//				return 5;
+//			}
+//			alert(calc(test1,test2));
+//			function CHENG2(a,b,c){
+//				var i,arr=[];
+//				for(i=0;i<3;i++){
+//					arr[i]=arguments[i]*2;
+//				}
+//				return arr;
+//			}
+//			function jia1(a){
+//				return a+1;
+//			}
+//			var arr1=[];
+//			arr1=CHENG2(10,20,30);
+//			alert(arr1);
+//			for(var i=0;i<3;i++){
+//				arr1[i]=jia1(arr1[i]);
+//			}
+//			alert(arr1);
+			function jia1(a){
+				return a+1;
+			}
+			function test(a,b,c,callback){
+				var i,arr=[];
+				for(i=0;i<3;i++){
+					arr[i]=callback(arguments[i]*2);
+				}
+				return arr;
+			}
+////		alert(test(5,6,7,jia1));
+//			alert(test(5,6,7,function(a){return a+2}))
+			function test1(a,b){
+				return a*b;
+			}
+			alert(test1.call(test1,5,6));
+			var params=[3,4];
+			alert(test1.apply(test1,params));
+			//自调用的用法:（函数）（）。
+			(
+				function(){
+				alert('hello');
+				}
+			)();
+			
+		</script>
+	</body>
+</html>

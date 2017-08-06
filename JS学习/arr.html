@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr=[];
+			var arr1=[1,2,true,null,undefined,[1,2,3],{x:1,y:1}];
+			var x=1;
+			var arr2=[x,x*5,x+4];
+			console.log(arr2);
+			console.log(arr2.length);
+			//通过构造函数的形式
+			var a=new Array();
+			var a=new Array(5);//数组的长度
+			arr[5]='HELLO';
+			console.log(arr);
+			
+			var arr=[];
+			arr[0]='a';
+			arr[1]='b';
+			arr.push('c');
+			console.log(arr);
+			var res=arr.pop();
+			console.log(res);
+			console.log(arr);//末尾删除
+			arr.unshift(1,2,3,4,5);//首部添加
+			res=arr.shift();//弹出首部的第一个元素
+			
+			delete arr[0];//删掉了数组的长度不变
+			console.log(arr);
+			
+			
+			var arr=['A','B'];
+			for(var i=0,len=arr.length;i<len;i++){
+				console.log(arr[i]);
+			}
+			//for in 
+			for(var i in arr){
+				if(arr.hasOwnProperty(i)){
+					console.log(arr[i]);
+				}
+			}
+			
+			var arr1=['A','B',1,2];
+			arr1.forEach(function(x){
+				console.log(x);
+			});
+			var arr2=['A','B',5,78,1,2,'C'];
+			arr2.sort();//默认用Unicode排序
+			console.log(arr2);
+			arr2.sort(function(a,b){
+				return a-b;
+			});
+			console.log(arr2);
+			res=arr2.concat(4,5,6);
+			console.log(res);
+			
+			var arr3=['A','B','C','B','C','B','C'];
+			res=arr3.slice(0,3);//ABC第四个不算
+			res=arr3.slice(2,-1);
+			console.log(res);
+			
+			var arr4=['A','B','C','B','C','B','C'];
+			res=arr4.splice(0,1);//A
+			res=arr4.splice(5);
+			res=arr4.splice(0,2,'@','%','*');
+			console.log(res);
+			console.log(arr4);
+			
+			var arr4=[1,5,3,78,54,26,14,2,36,9];
+			res=arr4.filter(function(x){
+				return x<10;
+			});
+			console.log(res);
+			
+			var arr=[1,2,3,4,5];
+			res=arr.reduce(function(a,b){
+				return a+b;
+			});
+			console.log(res);//相当于一个累加器
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function foo(){};
+//			foo.prototype.z=3;
+//			var obj=new foo();
+//			obj.x=1;
+//			obj.y=2;
+//			console.log(obj.x);
+//			console.log(obj.y);
+//			console.log(obj.z);//对象obj到prototype到objject.prototype
+//			//hasownproperty只是在对象上查找，in是在对象上原型上都可以
+//			console.log(obj.hasOwnProperty('x'));
+//			console.log(obj.hasOwnProperty('z'));
+//			var person={
+//				username:'king',
+//				sex:'male',
+//				get age(){
+//					return 12;
+//				},
+//				set age(val){
+//					console.log('不能设置'+val)
+//				}
+//			};
+//			console.log(person.username);
+//			console.log(person.age);
+			function classof(obj){
+				if(obj===null){
+					return 'null';
+				}
+				if(obj===undefined){
+					return 'undefined';
+				}
+				return Object.prototype.toString.call(obj).slice(8,-1);
+			}
+			var x=null;
+			console.log(classof(x));
+		</script>
+	</body>
+</html>
